@@ -27,7 +27,7 @@ let today = new Date();
 today.setDate(selectedDate);
 today.setMonth(month);
 today.setFullYear(year);
-document.querySelector('.left .selected #selected_date').innerHTML = selectedDate+'/'+month+'/'+year;
+document.querySelector('.left .selected #selected_date').innerHTML = selectedDate+'/'+(month+1)+'/'+year;
 document.querySelector('.left .selected #selected_day').innerHTML = Days[today.getDay()];
 }
 
