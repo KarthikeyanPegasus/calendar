@@ -1,4 +1,4 @@
-const date = new Date();
+const Dates = new Date();
 const Months = [
     'January',
     'February',
@@ -22,25 +22,25 @@ const Days = [
     'Friday',
     'Saturday'
 ];
-const selectDate = (date,month,year) => {
+const selectDate = (selectedDate,month,year) => {
 let today = new Date();
-today.setDate(date);
+today.setDate(selectedDate);
 today.setMonth(month);
 today.setFullYear(year);
-document.querySelector('.left .selected #selected_date').innerHTML = date+'/'+month+'/'+year;
+document.querySelector('.left .selected #selected_date').innerHTML = selectedDate+'/'+month+'/'+year;
 document.querySelector('.left .selected #selected_day').innerHTML = Days[today.getDay()];
 }
 
 const renderCalendar = () => {
-    let lastDate = new Date(date.getFullYear(), date.getMonth()+1, 0).getDate();
-    let lastDay = new Date(date.getFullYear(), date.getMonth()+1, 0).getDay();
-    let firstday = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-    let previousMonthLastDate = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+    let lastDate = new Date(Dates.getFullYear(), Dates.getMonth()+1, 0).getDate();
+    let lastDay = new Date(Dates.getFullYear(), Dates.getMonth()+1, 0).getDay();
+    let firstday = new Date(Dates.getFullYear(), Dates.getMonth(), 1).getDay();
+    let previousMonthLastDate = new Date(Dates.getFullYear(), Dates.getMonth(), 0).getDate();
     
-    let curMonth = date.getMonth();
-    let curYear = date.getFullYear();
-    let today = date.getDate();
-    let curDay = date.getDay();
+    let curMonth = Dates.getMonth();
+    let curYear = Dates.getFullYear();
+    let today = Dates.getDate();
+    let curDay = Dates.getDay();
     let days = "";
     
     for (let i = previousMonthLastDate-firstday+1; i <= previousMonthLastDate; i++) {
@@ -70,27 +70,27 @@ document.querySelector('.left .selected #selected_day').innerHTML = Days[curDay]
 
 
 document.querySelector('.previous_day').addEventListener('click', () => {
-    date.setDate(date.getDate()-1);
+    Dates.setDate(Dates.getDate()-1);
     renderCalendar();
 })
 document.querySelector('.next_day').addEventListener('click', () => {
-    date.setDate(date.getDate()+1);
+    Dates.setDate(Dates.getDate()+1);
     renderCalendar();
 })
 document.querySelector('.previous_month').addEventListener('click', () => {
-    date.setMonth(date.getMonth()-1);
+    Dates.setMonth(Dates.getMonth()-1);
     renderCalendar();
 })
 document.querySelector('.next_month').addEventListener('click', () => {
-    date.setMonth(date.getMonth()+1);
+    Dates.setMonth(Dates.getMonth()+1);
     renderCalendar();
 })
 document.querySelector('.previous_year').addEventListener('click', () => {
-    date.setFullYear(date.getFullYear()-1);
+    Dates.setFullYear(Dates.getFullYear()-1);
     renderCalendar();
 })
 document.querySelector('.next_year').addEventListener('click', () => {
-    date.setFullYear(date.getFullYear()+1);
+    Dates.setFullYear(Dates.getFullYear()+1);
     renderCalendar();
 })
 
