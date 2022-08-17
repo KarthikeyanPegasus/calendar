@@ -6,54 +6,10 @@
         <title>Calendar</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="app.css">
+        <link rel="stylesheet" href="style/main.css">
     </head>
     <body>
-        <div class="sidebar">
-
-            <div class="left">
-                <div class="selected">
-                    <div class="icon">
-                        <img class="previous_day" src="assets/left_light.png" alt="">
-                        <div>
-                            <p id="selected_date">18/04/2022</p>
-                            <p id="selected_day">Monday</p>
-                        </div>
-                        <img class="next_day" src="assets/right_light.png" alt="">
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="right">
-                <div class="topbar">               
-                    <div class="icon">
-                        <img class= "previous_month" src="assets/left_dark.png" alt="">
-                        <div class="selected_month"></div>
-                        <img class="next_month" src="assets/right_dark.png" alt="">
-                    </div>
-                 
-                    <div class="icon">
-                        <img class= "previous_year" src="assets/left_dark.png" alt="">
-                        <div class="selected_year"></div>
-                        <img class="next_year" src="assets/right_dark.png" alt="">
-                    </div>
-                </div>
-                <div class="weekdays">
-                    <p>sunday</p>
-                    <p>monday</p>
-                    <p>tuesday</p>
-                    <p>wednesday</p>
-                    <p>thursday</p>
-                    <p>friday</p>
-                    <p>saturday</p>
-                </div>
-                <div class="days">
-                </div>
-            </div>
-        </div>
-
-        
-        <script src="app.js" ></script>
+     <div class="calendar"></div>
+        <script src="js/main.js" type="module"></script>
     </body>
 </html>

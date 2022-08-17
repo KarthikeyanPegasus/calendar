@@ -13,6 +13,7 @@ const Months = [
     'November',
     'December'
 ];
+
 const Days = [
     'Sunday',
     'Monday',
@@ -22,11 +23,13 @@ const Days = [
     'Friday',
     'Saturday'
 ];
+
 const selectDate = (selectedDate,month,year) => {
 let today = new Date();
 today.setDate(selectedDate);
 today.setMonth(month);
 today.setFullYear(year);
+
 document.querySelector('.left .selected #selected_date').innerHTML = selectedDate+'/'+(month+1)+'/'+year;
 document.querySelector('.left .selected #selected_day').innerHTML = Days[today.getDay()];
 }
@@ -61,6 +64,7 @@ const renderCalendar = () => {
         days += `<p class="next_days">${i}</p>`;
         document.querySelector('.days').innerHTML = days;
     }
+
 document.querySelector('.right .topbar .selected_month').innerHTML = Months[curMonth];
 document.querySelector('.right .topbar .selected_year').innerHTML = curYear;
 document.querySelector('.left .selected #selected_date').innerHTML = today+'/'+(curMonth+1)+'/'+curYear;

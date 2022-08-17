@@ -4,21 +4,12 @@ body
     padding: 0;
     background-color: #FFF2F2;
 }
-.sidebar
-{
-    display: grid;
-    grid-template-columns: 400px 1fr;
-    height: 100vh;
-}
-.left
-{
-    width: 410px;
-    background-color: #F47C7C;
-    padding: 20px 0;
-    border-radius: 0px 50px 50px 0px;
-}
+
+
 .right
 {
+    display: grid;
+    position: relative;
     margin-top: 2%;
     justify-content: center;
     align-items: center;
@@ -26,47 +17,23 @@ body
 .selected{
     padding-top: 50px;
 }
-.left .icon
+
+.icon
 {
     display: grid;
     grid-template-columns: auto auto auto;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 410;
-    padding: 0% 15% 0 15%;
-}
-.right .icon
-{
-    display: grid;
-    grid-template-columns: auto auto auto;
   
-}
-.selected #selected_date{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 32;
-    font-weight: bolder;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.selected #selected_day{
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    font-size: 32;
-    font-weight: bolder;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .topbar
 {
     display: grid;
-    margin-left: 25%;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     color: black;
     font-size: 32;
     font-weight: bolder;
+    padding-top: 5%;
     text-transform: uppercase;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -89,10 +56,9 @@ body
 display: grid;
 align-items: center;
 justify-items: center;
-grid-template-columns: repeat(7, 1fr);
 }
 .days p {
-  padding: 20%;
+  padding: 10%;
 }
 
 .previous_month, .next_month
