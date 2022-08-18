@@ -1,7 +1,7 @@
 
 let defaultColumnCount = 7;
 
-const renderTable = (columnCount = defaultColumnCount,  days, weekdays) => {
+const renderTable = (days, weekdays, columnCount = defaultColumnCount) => {
     document.querySelector('.days').innerHTML = days;
     document.querySelector('.weekdays').innerHTML = weekdays;
     document.querySelector('.days').style.gridTemplateColumns = `repeat(${columnCount}, 1fr)`;
